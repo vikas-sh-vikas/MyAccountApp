@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useAuth } from './AuthContext';
@@ -10,7 +10,6 @@ const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
   const { isLoggedIn } = useAuth();
-
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
